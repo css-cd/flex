@@ -30,24 +30,25 @@
         .footer{
             background: pink;
         }
-        .wrap{
+        .wrap{/*容器*/
             width: 100%;
             display: flex;
-            flex-flow: row wrap;
+            flex-flow: row wrap;/*是  flex-direction flex-wrap 的缩写 wrap(包)是不换行*/
         }
-        .wrap div{
-            flex: 1 100%;/*flex-grow:1;flex-shrink:1;flex-basis:100%*/
+        /*记住:当屏幕缩小的时候不断的有属性消失 media */
+        .wrap div{/*flex是项目的放大 缩小和剩余空间*/
+            flex: 1 100%;/*flex-grow:1;flex-shrink:1;flex-basis:100% 集合写*/
         }
-        @media screen and (min-width: 600px){
+        @media screen and (min-width: 600px){/*600px以上不在 属性不在好用 */
             .wrap  .aside{
-                 flex: 1 auto;
+                 flex: 1 auto;/* 1 1 auto */ /*讲aside 的宽度弄回来*/
              }
         }
         @media screen and (min-width: 800px){
             .wrap .main{
-                flex: 2 0%;
+                flex: 20%; /*剩余20% 供其他的使用*/
             }
-            .aside-1{
+            .aside-1{/*order 是顺序*/
                 order: 1;
             }
             .main{
@@ -71,12 +72,12 @@
     <div class="aside aside-2">aside-2</div>
     <div class="footer">footer</div>
 </div>
-<div class="wrap">
-    <div class="header">header</div>
-    <div class="main">main</div>
-    <div class="aside aside-1">aside-1</div>
-    <div class="aside aside-2">aside-2</div>
-    <div class="footer">footer</div>
-</div>
+<!--<div class="wrap">-->
+    <!--<div class="header">header</div>-->
+    <!--<div class="main">main</div>-->
+    <!--<div class="aside aside-1">aside-1</div>-->
+    <!--<div class="aside aside-2">aside-2</div>-->
+    <!--<div class="footer">footer</div>-->
+<!--</div>-->
 </body>
 </html>
