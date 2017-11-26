@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Title</title>
+<style>
+	ul {
+		width: 100%;
+		padding: 10px;
+		overflow: hidden;
+		height: auto;
+		box-sizing: border-box;
+		background: darkorange;
+	}
+
+	li {
+		position: relative;
+		box-sizing: border-box;
+		float: left;
+		width: 33%;
+		margin: 0;
+		background: darkgrey;
+		text-align: center;
+	}
+
+	.center:before{
+		content:"";
+		display: block;
+		position: absolute;
+		width: 1px;
+		height: 100px;
+		background: red;
+	}
+	p {
+		margin: 0;
+		font-size: 18px;
+		line-height: .4rem;
+		color: darkblue;
+	}
+	.div{
+		width: 100px;
+		height: 100px;
+		background: darkblue;
+	}
+	/*.div:after{*/
+	/*下面四个是 伪类的关键*/
+		/*display: inline-block;*/
+		/*content: '';*/
+		/*background: red;*/
+		/*width: 10px;*/
+		/*height: 10px;*/
+	/*}*/
+</style>
+</head>
+<body>
+<ul>
+	<li>
+		<p>剩余总额度</p>
+		<p>剩余总额度</p>
+	</li>
+	<li class="center">
+		<p>剩余总额度</p>
+		<p>剩余总额度</p>
+		<p>剩余总额度</p>
+	</li>
+	<li class="center">
+		<p>剩余总额度</p>
+		<p>剩余总额度</p>
+		<p>剩余总额度</p>
+	</li>
+	<li class="center">
+		<p>剩余总额度</p>
+		<p>剩余总额度</p>
+		<p>剩余总额度</p>
+	</li>
+</ul>
+
+</body>
+</html>

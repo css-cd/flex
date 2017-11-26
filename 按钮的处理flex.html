@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Title</title>
+	<link rel="stylesheet" href="./reset.css">
+	<style>
+		ul{
+			width: 80%;
+			/*高度最好写死rem 宽度可用rem ||百分比   ul用百分比 li也用百分比 ul用rem li也用rem*/
+			height: 1rem;
+			background:darkgrey;
+			margin: auto;
+			display: flex;
+		}
+		li{
+			margin-left: 5%;
+			flex: 1;
+			text-align: center;
+			height: 100%;
+			line-height: 1rem;
+			width: 30%;
+			color: #fff;
+			background: darkblue;
+		}
+		li:nth-of-type(1){
+			margin-left:0%;
+		}
+	</style>
+</head>
+<body>
+<pre>这个和伪类的实现方案一样</pre>
+<ul>
+	<li>1</li>
+	<li class="active">2</li>
+	<li class="active">3</li>
+</ul>
+</body>
+</html>
+<script>
+
+	function setRem() {
+		document.documentElement.style.fontSize = (document.documentElement.clientWidth > 750 ? 100 : document.documentElement.clientWidth * 100 / 750) + 'px';
+	}
+	function resetRem() {
+		setRem();
+		document.addEventListener('DOMContentLoaded', function() {
+			setRem();
+		});
+		window.addEventListener('load', function() {
+			setTimeout(setRem, 300);
+		});
+		window.addEventListener('resize', function() {
+			setTimeout(setRem, 300);
+		});
+	}
+	resetRem();
+</script>
