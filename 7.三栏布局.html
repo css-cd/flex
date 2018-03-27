@@ -8,13 +8,7 @@
             margin: 0;
             padding:0
         }
-        .header,.footer{
-            padding: 30px;
-        }
-        .main,.aside{
-            padding: 30px;
-            height: 100px;
-        }
+      
         .header{
             background: red;
         }
@@ -30,6 +24,13 @@
         .footer{
             background: pink;
         }
+        .header,.footer{
+            padding: 30px;
+        }
+        .main,.aside{
+            padding: 30px;
+            height: 100px;
+        }
         .wrap{/*容器*/
             width: 100%;
             display: flex;
@@ -41,14 +42,17 @@
         }
         @media screen and (min-width: 600px){/*600px以上不在 属性不在好用 */
             .wrap  .aside{
+                
                  flex: 1 auto;/* 1 1 auto */ /*讲aside 的宽度弄回来*/
              }
         }
         @media screen and (min-width: 800px){
             .wrap .main{
+                /* 关键在于 */
                 flex: 20%; /*剩余20% 供其他的使用*/
             }
-            .aside-1{/*order 是顺序*/
+            
+            .aside-1{
                 order: 1;
             }
             .main{
